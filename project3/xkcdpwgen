@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
 import argparse
 import random
@@ -23,7 +23,7 @@ for i in range(args.words):
     file = open("words.txt", "r")
     data = file.read()
     listdata = data.split("\n")
-    pwlist.append(random.choice(listdata))
+    pwlist.append(random.choice(listdata).lower())
 for i in range(args.caps):
     index = random.randint(0, len(pwlist)-1)
     pwlist[index] = pwlist[index].capitalize()
